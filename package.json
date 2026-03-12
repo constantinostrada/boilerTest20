@@ -1,0 +1,41 @@
+{
+  "name": "boilertest20",
+  "version": "1.0.0",
+  "description": "A production-ready HTML, CSS, and JavaScript boilerplate project",
+  "main": "src/js/main.js",
+  "scripts": {
+    "start": "npx live-server src --port=3000",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "npx postcss src/css/styles.css -o dist/css/styles.min.css --use cssnano",
+    "build:js": "npx esbuild src/js/main.js --bundle --minify --sourcemap --outfile=dist/js/main.min.js",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "npx eslint src/js/**/*.js",
+    "lint:css": "npx stylelint src/css/**/*.css",
+    "format": "npx prettier --write \"src/**/*.{html,css,js}\"",
+    "format:check": "npx prettier --check \"src/**/*.{html,css,js}\"",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean && mkdir -p dist/css dist/js dist/assets"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "boilerplate",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "cssnano": "^6.0.3",
+    "esbuild": "^0.19.0",
+    "eslint": "^9.0.0",
+    "globals": "^14.0.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.2.4",
+    "stylelint": "^16.2.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

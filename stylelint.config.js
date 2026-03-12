@@ -1,0 +1,15 @@
+export default {
+  extends: ['stylelint-config-standard'],
+  rules: {
+    'selector-class-pattern': null,
+    'custom-property-pattern': null,
+    'color-function-notation': 'modern',
+    'alpha-value-notation': 'number',
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['global'],
+      },
+    ],
+  },
+};
