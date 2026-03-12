@@ -5,8 +5,9 @@
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
-  "arrowParens": "avoid",
-  "endOfLine": "lf",
+  "arrowParens": "always",
   "bracketSpacing": true,
-  "bracketSameLine": false
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "quoteProps": "as-needed"
 }

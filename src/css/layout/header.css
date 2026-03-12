@@ -1,0 +1,36 @@
+/* Header Layout */
+
+.header {
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  padding: var(--spacing-md) 0;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__brand h1 {
+  font-size: var(--font-size-xl);
+  margin: 0;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .nav__brand h1 {
+    font-size: var(--font-size-lg);
+  }
+}

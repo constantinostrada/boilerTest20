@@ -3,156 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BoilerTest20 - A modern web application" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="BoilerTest20 - A production-ready HTML, CSS, and JavaScript boilerplate" />
+    <meta name="keywords" content="html, css, javascript, boilerplate" />
     <meta name="author" content="" />
-    <title>BoilerTest20</title>
-
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BoilerTest20" />
+    <meta property="og:description" content="A production-ready HTML, CSS, and JavaScript boilerplate" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BoilerTest20" />
+    <meta name="twitter:description" content="A production-ready HTML, CSS, and JavaScript boilerplate" />
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    
+    <title>BoilerTest20</title>
   </head>
   <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <h1 class="logo">BoilerTest20</h1>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#features" class="nav-link">Features</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
+    <header class="header" role="banner">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <div class="nav__brand">
+            <h1 class="nav__logo">BoilerTest20</h1>
+          </div>
+          <ul class="nav__menu">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
-        </nav>
-      </div>
+          <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main id="main-content" class="main" role="main">
       <!-- Hero Section -->
-      <section id="home" class="hero">
+      <section class="hero" id="home">
         <div class="container">
-          <h2 class="hero-title">Welcome to BoilerTest20</h2>
-          <p class="hero-subtitle">
-            A production-ready HTML, CSS, and JavaScript boilerplate
-          </p>
-          <button class="btn btn-primary" id="ctaButton">Get Started</button>
+          <div class="hero__content">
+            <h2 class="hero__title">Welcome to BoilerTest20</h2>
+            <p class="hero__subtitle">
+              A production-ready HTML, CSS, and JavaScript boilerplate with modern tooling and best practices.
+            </p>
+            <div class="hero__actions">
+              <button class="btn btn--primary" id="get-started">Get Started</button>
+              <button class="btn btn--secondary">Learn More</button>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Features Section -->
-      <section id="features" class="features">
+      <section class="features" id="features">
         <div class="container">
-          <h2 class="section-title">Features</h2>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">🚀</div>
-              <h3 class="feature-title">Fast & Modern</h3>
-              <p class="feature-description">
-                Built with modern web technologies and best practices
+          <h2 class="section__title">Features</h2>
+          <div class="features__grid">
+            <article class="feature-card">
+              <div class="feature-card__icon">📦</div>
+              <h3 class="feature-card__title">Modern JavaScript</h3>
+              <p class="feature-card__description">
+                ES6+ syntax with Babel transpilation for broad browser compatibility.
               </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">📦</div>
-              <h3 class="feature-title">Production Ready</h3>
-              <p class="feature-description">
-                Complete tooling setup for development and production builds
+            </article>
+            
+            <article class="feature-card">
+              <div class="feature-card__icon">🎨</div>
+              <h3 class="feature-card__title">CSS Processing</h3>
+              <p class="feature-card__description">
+                PostCSS with Autoprefixer ensures your styles work everywhere.
               </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">✨</div>
-              <h3 class="feature-title">Clean Code</h3>
-              <p class="feature-description">
-                Linting and formatting configured out of the box
+            </article>
+            
+            <article class="feature-card">
+              <div class="feature-card__icon">🔍</div>
+              <h3 class="feature-card__title">Code Quality</h3>
+              <p class="feature-card__description">
+                ESLint and Stylelint keep your code clean and consistent.
               </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">🎨</div>
-              <h3 class="feature-title">Customizable</h3>
-              <p class="feature-description">
-                Easy to customize with CSS custom properties
+            </article>
+            
+            <article class="feature-card">
+              <div class="feature-card__icon">🚀</div>
+              <h3 class="feature-card__title">Optimized Build</h3>
+              <p class="feature-card__description">
+                Webpack bundles your code for production-ready performance.
               </p>
-            </div>
+            </article>
+            
+            <article class="feature-card">
+              <div class="feature-card__icon">📱</div>
+              <h3 class="feature-card__title">Responsive Design</h3>
+              <p class="feature-card__description">
+                Mobile-first approach ensures great experience on all devices.
+              </p>
+            </article>
+            
+            <article class="feature-card">
+              <div class="feature-card__icon">♿</div>
+              <h3 class="feature-card__title">Accessible</h3>
+              <p class="feature-card__description">
+                Built with WCAG 2.1 guidelines for inclusive web experiences.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- Counter Demo Section -->
-      <section id="about" class="demo">
+      <section class="demo" id="about">
         <div class="container">
-          <h2 class="section-title">Interactive Demo</h2>
-          <div class="counter-container">
-            <p class="counter-label">Counter:</p>
-            <p class="counter-value" id="counterValue">0</p>
-            <div class="counter-controls">
-              <button class="btn btn-secondary" id="decrementBtn">-</button>
-              <button class="btn btn-secondary" id="resetBtn">Reset</button>
-              <button class="btn btn-secondary" id="incrementBtn">+</button>
+          <h2 class="section__title">Interactive Demo</h2>
+          <div class="counter">
+            <p class="counter__label">Counter Value:</p>
+            <p class="counter__value" id="counter-value">0</p>
+            <div class="counter__controls">
+              <button class="btn btn--small" id="decrement">−</button>
+              <button class="btn btn--small" id="reset">Reset</button>
+              <button class="btn btn--small" id="increment">+</button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2 class="section-title">Get In Touch</h2>
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name" class="form-label">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="form-input"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-input"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-textarea"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        <p class="footer-text">
-          &copy; 2024 BoilerTest20. All rights reserved.
+        <p class="footer__text">
+          &copy; <span id="current-year"></span> BoilerTest20. Built with modern web technologies.
         </p>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="#" class="footer__link">Terms of Service</a>
+          <a href="#" class="footer__link">Contact</a>
+        </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

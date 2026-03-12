@@ -1,97 +1,74 @@
-import { Counter } from './components/Counter.js';
-import { SmoothScroll } from './utils/smoothScroll.js';
-import { FormValidator } from './utils/formValidator.js';
+/**
+ * Main JavaScript Entry Point
+ * BoilerTest20
+ */
+
+import { initNavigation } from './modules/navigation.js';
+import { initSmoothScroll } from './modules/smoothScroll.js';
+import { updateCopyrightYear } from './utils/helpers.js';
+import { logWelcomeMessage } from './utils/logger.js';
 
 /**
- * Main application entry point
+ * Initialize application
  */
-class App {
-  constructor() {
-    this.init();
+const init = () => {
+  // Log welcome message
+  logWelcomeMessage();
+
+  // Initialize navigation
+  initNavigation();
+
+  // Initialize smooth scrolling
+  initSmoothScroll();
+
+  // Update copyright year
+  updateCopyrightYear();
+
+  // CTA Button handler
+  const ctaButton = document.getElementById('ctaButton');
+  if (ctaButton) {
+    ctaButton.addEventListener('click', handleCTAClick);
   }
 
-  /**
-   * Initialize the application
-   */
-  init() {
-    console.log('🚀 BoilerTest20 initialized');
+  // Add loaded class to body
+  document.body.classList.add('loaded');
+};
 
-    // Wait for DOM to be ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => this.onReady());
-    } else {
-      this.onReady();
-    }
-  }
+/**
+ * Handle CTA button click
+ */
+const handleCTAClick = () => {
+  const message = 'Welcome to BoilerTest20! This is a production-ready boilerplate.';
+  alert(message);
+  console.log('CTA button clicked');
+};
 
-  /**
-   * Called when DOM is ready
-   */
-  onReady() {
-    this.initializeComponents();
-    this.attachEventListeners();
-  }
-
-  /**
-   * Initialize all components
-   */
-  initializeComponents() {
-    // Initialize Counter
-    const counterValue = document.getElementById('counterValue');
-    const incrementBtn = document.getElementById('incrementBtn');
-    const decrementBtn = document.getElementById('decrementBtn');
-    const resetBtn = document.getElementById('resetBtn');
-
-    if (counterValue && incrementBtn && decrementBtn && resetBtn) {
-      new Counter({
-        valueElement: counterValue,
-        incrementBtn,
-        decrementBtn,
-        resetBtn,
-      });
-    }
-
-    // Initialize Smooth Scroll
-    new SmoothScroll();
-
-    // Initialize Form Validator
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      new FormValidator(contactForm);
-    }
-  }
-
-  /**
-   * Attach global event listeners
-   */
-  attachEventListeners() {
-    // CTA Button
-    const ctaButton = document.getElementById('ctaButton');
-    if (ctaButton) {
-      ctaButton.addEventListener('click', this.handleCTAClick.bind(this));
-    }
-
-    // Log window resize for debugging
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        console.log('Window resized:', window.innerWidth, 'x', window.innerHeight);
-      }, 250);
-    });
-  }
-
-  /**
-   * Handle CTA button click
-   */
-  handleCTAClick() {
-    console.log('CTA button clicked');
-    const featuresSection = document.getElementById('features');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+/**
+ * DOM Content Loaded Event
+ */
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
 }
 
-// Initialize the application
-new App();
+/**
+ * Page Load Event
+ */
+window.addEventListener('load', () => {
+  console.log('Page fully loaded');
+});
+
+/**
+ * Handle page visibility changes
+ */
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    console.log('Page is hidden');
+  } else {
+    console.log('Page is visible');
+  }
+});
+
+// Export for testing purposes
+export { init };

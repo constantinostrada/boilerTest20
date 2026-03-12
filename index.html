@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="BoilerTest20 - A modern HTML, CSS, and JavaScript boilerplate"
+    />
+    <meta name="author" content="" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="src/assets/favicon.png" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/css/styles.css" />
+    
+    <title>BoilerTest20</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="container">
+          <div class="nav__brand">
+            <h1>BoilerTest20</h1>
+          </div>
+          <ul class="nav__menu">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+          <button class="nav__toggle" aria-label="Toggle navigation">
+            <span class="nav__toggle-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h2 class="hero__title">Welcome to BoilerTest20</h2>
+            <p class="hero__subtitle">
+              A production-ready boilerplate for modern web development
+            </p>
+            <button class="btn btn--primary" id="ctaButton">Get Started</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section__title">Features</h2>
+          <div class="features__grid">
+            <div class="feature-card">
+              <div class="feature-card__icon">📁</div>
+              <h3 class="feature-card__title">Clean Structure</h3>
+              <p class="feature-card__description">
+                Organized and scalable project architecture
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon">🎨</div>
+              <h3 class="feature-card__title">Modern CSS</h3>
+              <p class="feature-card__description">
+                PostCSS with modern features and optimizations
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon">🚀</div>
+              <h3 class="feature-card__title">Vanilla JS</h3>
+              <p class="feature-card__description">
+                Clean JavaScript with ES6+ features
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon">⚡</div>
+              <h3 class="feature-card__title">Performance</h3>
+              <p class="feature-card__description">
+                Optimized build process for production
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section__title">About</h2>
+          <p class="about__text">
+            BoilerTest20 is a professional-grade boilerplate designed to kickstart
+            your web development projects. It includes modern tooling, best practices,
+            and a solid foundation for building scalable applications.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">
+          &copy; <span id="currentYear"></span> BoilerTest20. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/js/main.js" type="module"></script>
+  </body>
+</html>

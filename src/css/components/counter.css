@@ -1,0 +1,80 @@
+/* Counter Component Styles */
+
+.demo {
+  background-color: var(--color-white);
+}
+
+.counter {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl);
+  background-color: var(--color-background-alt);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.counter__label {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.counter__value {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xl);
+  font-variant-numeric: tabular-nums;
+}
+
+.counter__controls {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.counter__controls .btn {
+  min-width: 80px;
+}
+
+.counter__controls .btn--small {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+/* Responsive Counter */
+@media (max-width: 640px) {
+  .counter {
+    padding: var(--spacing-xl);
+  }
+
+  .counter__value {
+    font-size: var(--font-size-4xl);
+  }
+
+  .counter__controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .counter__controls .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .counter__controls .btn--small {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-size-2xl);
+  }
+}

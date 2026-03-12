@@ -4,49 +4,51 @@ A production-ready HTML, CSS, and JavaScript boilerplate project with modern too
 
 ## Features
 
-- 📦 Modern JavaScript (ES6+)
-- 🎨 Clean CSS architecture
-- 🔧 ESLint for JavaScript linting
+- 📁 Clean and organized project structure
+- 🎨 Modern CSS with PostCSS support
+- 🚀 Vanilla JavaScript (ES6+)
+- 🔍 ESLint for JavaScript linting
 - 💅 Stylelint for CSS linting
 - ✨ Prettier for code formatting
-- 🚀 Live development server
-- 📦 Build tools for production (esbuild, PostCSS)
-- 🗂️ Organized project structure
+- 🔧 Build scripts for production optimization
+- 🔥 Live development server
 
 ## Project Structure
 
 ```
 BoilerTest20/
-├── src/
-│   ├── index.html          # Main HTML file
-│   ├── css/
-│   │   ├── styles.css      # Main stylesheet
-│   │   ├── variables.css   # CSS custom properties
-│   │   └── components/     # Component-specific styles
-│   ├── js/
-│   │   ├── main.js         # Main JavaScript entry point
-│   │   ├── utils/          # Utility functions
-│   │   └── components/     # JavaScript components
-│   └── assets/
-│       └── images/         # Image assets
-├── dist/                   # Production build output
-├── .gitignore
-├── .prettierrc
-├── eslint.config.js
-├── stylelint.config.js
-└── package.json
+├── src/                    # Source files
+│   ├── css/               # CSS stylesheets
+│   │   ├── styles.css     # Main stylesheet
+│   │   ├── base/          # Base styles (reset, variables, typography)
+│   │   ├── components/    # Component styles
+│   │   └── layout/        # Layout styles
+│   ├── js/                # JavaScript files
+│   │   ├── main.js        # Main JavaScript entry point
+│   │   ├── utils/         # Utility functions
+│   │   └── modules/       # Feature modules
+│   └── assets/            # Static assets (images, fonts, etc.)
+├── dist/                  # Production build output
+├── index.html             # Main HTML file
+├── package.json           # Project dependencies and scripts
+├── .eslintrc.json         # ESLint configuration
+├── .stylelintrc.json      # Stylelint configuration
+├── .prettierrc            # Prettier configuration
+├── postcss.config.js      # PostCSS configuration
+└── .gitignore             # Git ignore rules
+
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
-1. Clone or download this repository
+1. Clone or download this project
 2. Install dependencies:
 
 ```bash
@@ -61,7 +63,7 @@ Start the development server with live reload:
 npm start
 ```
 
-The application will be available at `http://localhost:3000`
+This will start a local server at `http://localhost:3000`
 
 ### Building for Production
 
@@ -71,7 +73,10 @@ Create an optimized production build:
 npm run build
 ```
 
-The built files will be in the `dist/` directory.
+This will:
+- Minify and optimize CSS files
+- Minify and compress JavaScript files
+- Output files to the `dist/` directory
 
 ### Code Quality
 
@@ -101,27 +106,23 @@ Format code with Prettier:
 npm run format
 ```
 
-Check formatting without modifying files:
+Check formatting without making changes:
 
 ```bash
 npm run format:check
 ```
 
-## Scripts
-
-- `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm run lint` - Lint JavaScript and CSS
-- `npm run format` - Format all files with Prettier
-- `npm run clean` - Remove dist directory
-
 ## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Chrome (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Edge (last 2 versions)
 
 ## License
 
 MIT
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

@@ -1,0 +1,26 @@
+/* Header Layout */
+
+.header {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.nav {
+  padding: var(--spacing-md) 0;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .nav .container {
+    flex-wrap: wrap;
+  }
+}

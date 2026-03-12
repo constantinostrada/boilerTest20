@@ -1,0 +1,21 @@
+/* Container Layout */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Responsive Container Padding */
+@media (min-width: 640px) {
+  .container {
+    --container-padding: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    --container-padding: var(--spacing-xl);
+  }
+}

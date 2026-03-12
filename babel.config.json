@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["> 0.5%", "last 2 versions", "not dead"]
+        },
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "modules": false
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "sourceMaps": true,
+      "retainLines": true
+    },
+    "production": {
+      "comments": false,
+      "minified": true
+    }
+  }
+}
